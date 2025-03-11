@@ -4,13 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flower Shop</title>
-    <!-- Google font CDN -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
     <!-- DaisyUI + Tailwind css CDN -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
@@ -18,30 +11,168 @@
       type="text/css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="./imeges/pngwing 10.png"
+      type="image/x-icon"
+    />
+    <!-- Google Font cdn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome CDN -->
+    <script
+      src="https://kit.fontawesome.com/fd794fe3da.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .font-lato {
+        font-family: "Lato", sans-serif;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#ff5733",
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body>
-    <header>
-      <div class="hero bg-[#E554731A] mt-16">
-        <div class="hero-content flex-col lg:flex-row-reverse">
-          <img src="./imeges/pngwing 10.png" class="rounded-lg" />
-          <div>
-            <h1 class="text-5xl font-bold">
-              Let's make <br />
-              beautiful flowers a <br />
-              part of your life.
-            </h1>
-            <p class="py-6">
-              It is a long established fact that a reader will be distracted by
-              the readable <br />
-              content of a page when looking at its layout. The point of using
-              <br />
-              Lorem Ipsum is that it has a more-or-less normal distribution of
-              letters.
-            </p>
-            <button class="btn bg-[#E55473] text-[#FFFFFF]">Shop Now</button>
+  <body class="font-lato">
+    <header class="md:container mx-auto">
+      <!-- Navbar -->
+      <nav>
+        <div class="navbar">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              >
+                <li><a>Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Blog</a></li>
+                <li><a>Contact Us</a></li>
+              </ul>
+            </div>
+            <a class="btn btn-ghost text-xl font-bold">Flower Shop</a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a>Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Blog</a></li>
+              <li><a>Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <a class="btn bg-[#E55473] text-white">Details</a>
           </div>
         </div>
-      </div>
+      </nav>
+      <!-- Banner Section -->
+      <section>
+        <div class="hero bg-[#E554731A] h-[850px]">
+          <div class="hero-content flex-col lg:flex-row-reverse">
+            <img class="h-[600px]" src="./imeges/pngwing 10.png" />
+            <div>
+              <h1 class="text-5xl font-bold">
+                Let's make beautiful flowers a part of your life.
+              </h1>
+              <p class="py-4">
+                It is a long established fact that a reader will be distracted
+                by the readable content of a page when looking at its layout.
+                The point of using Lorem Ipsum is that it has a more-or-less
+                normal distribution of letters.
+              </p>
+              <button class="btn bg-[#E55473] text-white">Shop Now</button>
+            </div>
+          </div>
+        </div>
+      </section>
     </header>
+    <main class="md:container mx-auto">
+      <!-- Card -->
+      <section class="mt-24 mb-24">
+        <h2 class="text-5xl font-bold mb-4 text-center">
+          Our Featured Flowers
+        </h2>
+        <p class="text-[#27272799] text-center">
+          It is a long established fact that a reader will be distracted by the
+          readable <br />
+          content of a page when looking at its layout.
+        </p>
+        <div
+          class="gap-4 grid grid-cols-1 px-4 md:grid-cols-2 lg:grid-cols-3 mt-12"
+        >
+          <!-- Card 1 -->
+          <div class="card bg-[#A7216226] h-[600px] rounded-t-full">
+            <figure>
+              <img
+                class="w-[300px] mt-20"
+                src="./imeges/pngwing 6.png"
+                alt="flower"
+              />
+            </figure>
+            <p class="underline text-center mt-12 font-bold text-gray-500">
+              Pink Flower Tree
+            </p>
+          </div>
+          <!-- Card 2 -->
+          <div class="card bg-[#0597A026] h-[600px] rounded-t-full">
+            <figure>
+              <img
+                class="w-[300px] mt-20"
+                src="./imeges/pngwing 7.png"
+                alt="flower"
+              />
+            </figure>
+            <p class="underline text-center mt-4 font-bold text-gray-500">
+              Rose Flower Tree
+            </p>
+          </div>
+          <!-- Card 3 -->
+          <div class="card bg-[#477D1126] h-[600px] rounded-t-full">
+            <figure>
+              <img
+                class="w-[300px] mt-20"
+                src="./imeges/pngwing 7.png"
+                alt="flower"
+              />
+            </figure>
+            <p class="underline text-center mt-4 font-bold text-gray-500">
+              Yellow Flower Tree
+            </p>
+          </div>
+        </div>
+      </section>
+
+      
+
+    </main>
   </body>
 </html>
